@@ -1,5 +1,5 @@
-eader {
-  background: url("header-bg.jpg") no-repeat center center/cover;
+header {
+  background: url("./images/header-bg.jpg");)no-repeat center center/cover;
   height: 400px; /* фиксируем высоту блока */
   filter: brightness(1.2); /* увеличиваем яркость на 20% */
   display: flex; /* включаем flex */
