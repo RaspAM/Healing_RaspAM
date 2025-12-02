@@ -1,37 +1,49 @@
-/* Общие настройки */
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f4f7f9;
-  color: #333;
+/* Шапка с фоном и акцентом */
+header {
+  background: url('images/collage-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
 }
 
-/* Шапка с фоном */
-header {
-  background: url('header-bg.jpg') no-repeat center center/cover;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45); /* затемнение для читаемости текста */
 }
 
 header h1 {
-  margin: 0;
+  position: relative;
+  z-index: 1;
   font-size: 2.8em;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  border-bottom: 3px solid #ffd700; /* золотой акцент */
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 header p {
-  margin: 10px 0 20px;
+  position: relative;
+  z-index: 1;
   font-size: 1.2em;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 8px;
 }
 
 /* Навигация */
 nav ul {
+  position: relative;
+  z-index: 1;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 25px;
 }
 
 nav ul li {
@@ -40,36 +52,32 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ffd700;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffd700;
+  color: #fff;
 }
 
-/* Секции */
+/* Секции с акцентами */
 section {
   padding: 40px 20px;
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
   background: #fff;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-section:hover {
-  transform: translateY(-5px);
+  border-left: 6px solid #006699; /* акцентная линия */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 section h2 {
   color: #006699;
   margin-top: 0;
-  border-bottom: 2px solid #006699;
+  font-size: 1.6em;
+  border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }
 
@@ -79,8 +87,4 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-}
-
-footer p {
-  margin: 5px 0;
 }
