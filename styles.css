@@ -1,12 +1,12 @@
 /* Header */
 header {
-  background: url("./images/header-bg.jpg") no-repeat center center/cover;
-  min-height: 100vh;              /* высота = экран */
+  background: url("header-bg.jpg") no-repeat center center/cover;
+  min-height: 100vh; /* высота = экран */
   filter: brightness(1.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;        /* центрируем по вертикали */
-  align-items: center;            /* центрируем по горизонтали */
+  justify-content: center; /* центрируем по вертикали */
+  align-items: center; /* центрируем по горизонтали */
   text-align: center;
   color: #003366;
   padding: 20px;
@@ -14,19 +14,19 @@ header {
 
 /* Заголовок h1 */
 header h1 {
-  font-size: 2.5em;               /* чуть меньше */
+  font-size: 2.4em; /* было 2.6 */
   margin-bottom: 20px;
   color: #003366;
-  text-shadow: -1px -1px 0 #f4e1e1, 1px -1px 0 #f3e3e3,
-               -1px 1px 0 #f0dada, 1px 1px 0 #eef6e2;
+  text-shadow: -1px -1px 0 #f4e1e1, 1px -1px 0 #f3e3e3, -1px 1px 0 #f0dada,
+    1px 1px 0 #eef6e2;
 }
 
 /* Приветственный текст p */
 header p {
-  font-size: 1.2em;               /* уменьшен размер */
-  max-width: 800px;               /* ограничиваем ширину */
+  font-size: 2.2em; /* было 1.5 */
+  max-width: 900px; /* было 800 */
   line-height: 1.4;
-  color: #040009;
+  color: #000224;
   text-shadow: 1px 1px 0 #e9ebcb;
   margin-bottom: 20px;
 }
@@ -36,8 +36,8 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 20px 0 0 0;
-  display: flex;                  /* используем flex */
-  flex-wrap: wrap;                /* переносим аккуратно */
+  display: flex; /* используем flex */
+  flex-wrap: wrap; /* переносим аккуратно */
   justify-content: center;
 }
 
@@ -49,15 +49,15 @@ nav ul li a {
   color: #ffd700;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1em;                 /* нормальный размер */
-  padding: 8px 16px;              /* компактные кнопки */
+  font-size: 1.6em; /* был 1.4 */
+  padding: 8px 16px; /* компактные кнопки */
   border-radius: 6px;
   transition: all 0.3s ease;
   display: inline-block;
 }
 
 nav ul li a:hover {
-  background-color: #ffd700;
+  background-color: #edcc13;
   color: #003366;
   box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
 }
