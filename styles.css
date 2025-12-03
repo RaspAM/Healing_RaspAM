@@ -1,40 +1,7 @@
 /* Header */
-/* Для планшетов и телефонов */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2em;   /* уменьшаем заголовок */
-  }
-  header p {
-    font-size: 1.1em; /* текст компактнее */
-  }
-  nav ul {
-    flex-direction: column; /* меню в столбик */
-    gap: 10px;
-  }
-  nav ul li a {
-    font-size: 1em;
-    padding: 10px 14px;
-  }
-}
-/* Для очень маленьких экранов (телефоны <480px) */
-@media (max-width: 480px) {
-  header {
-    padding: 20px 10px;
-  }
-  header h1 {
-    font-size: 1.6em;
-  }
-  header p {
-    font-size: 1em;
-  }
-
-  nav ul li a {
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
-}
 header {
-  background: url("./images/header-bg.jpg") no-repeat center center/cover;
+  background: url("header-bg.jpg") no-repeat center center/cover;
+  min-height: 100vh; /* высота = экран */
   filter: brightness(1.2);
   display: flex;
   flex-direction: column;
@@ -62,6 +29,7 @@ header p {
   color: #000224;
   text-shadow: 1px 1px 0 #e9ebcb;
   margin-bottom: 20px;
+  margin-bottom: 40px; /* увеличиваем расстояние до меню */
 }
 
 /* Навигация */
@@ -79,20 +47,21 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffd700;
-  text-decoration: none;
+  color: #0b021d;
+  text-shadow: 1px 1px 0 #e9ebcb;
   font-weight: bold;
   font-size: 1.6em; /* был 1.4 */
   padding: 8px 16px; /* компактные кнопки */
   border-radius: 6px;
   transition: all 0.3s ease;
   display: inline-block;
+  border: 1px solid rgb(62, 181, 240); /* оливковый контур */
 }
 
 nav ul li a:hover {
   background-color: #edcc13;
   color: #003366;
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+  box-shadow: 0 0 8px rgba(38, 255, 0, 0.7);
 }
 
 /* Секции */
@@ -121,3 +90,57 @@ footer {
   text-align: center;
   padding: 20px;
 }
+/* Секция "О месте на карте" */
+#opus {
+  font-size: 1.2em; /* увеличенный текст */
+  line-height: 1.4;
+}
+#opus h2 {
+  font-size: 1.8em; /* крупный заголовок */
+}
+
+/* Секция "История" */
+#history {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+#history h2 {
+  font-size: 1.9em;
+}
+
+/* Секция "Методы лечения" */
+#healing {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+#healing h2 {
+  font-size: 1.4em;
+}
+
+/* Секция "Проживание" */
+#hotels {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+#hotels h2 {
+  font-size: 1.9em;
+}
+
+/* Секция "Экскурсии" */
+#excursions {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+#excursions h2 {
+  font-size: 1.9em;
+}
+
+/* Секция "Контакты" */
+#contacts {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+#contacts h2 {
+  font-size: 1.9em;
+}
+
