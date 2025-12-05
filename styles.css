@@ -124,6 +124,10 @@ section h2 {
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }
+.star {
+  color: gold;       /* золотой цвет */
+  font-size: 1.5em;  /* можно увеличить размер */
+}
 
 /* Футер */
 footer {
