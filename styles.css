@@ -1,4 +1,10 @@
 /* Адаптивность */
+@media (max-width: 480px) {
+  header {
+    background-position: top center; /* показываем верхнюю часть */
+    background-size: contain;        /* картинка целиком, но могут быть поля */
+  }
+}
 @media (max-width: 768px) {
   header h1 {
     font-size: 2em;
