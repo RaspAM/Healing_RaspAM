@@ -1,4 +1,10 @@
 /* Адаптивность */
+@media (max-width: 480px) {
+  header {
+    background-position: top center; /* показываем верхнюю часть */
+    background-size: contain;        /* картинка целиком, но могут быть поля */
+  }
+}
 @media (max-width: 768px) {
   header h1 {
     font-size: 2em;
@@ -15,19 +21,21 @@
     padding: 10px 14px;
   }
 }
+
 @media (max-width: 480px) {
   header {
-    background-position: top center; /* показываем верхнюю часть */
-    background-size: contain;        /* картинка целиком, но могут быть поля */
-  header {
-    padding: 20px 10px;  }
+    padding: 20px 10px;
+  }
   header h1 {
-    font-size: 1.6em;  }
+    font-size: 1.6em;
+  }
   header p {
-    font-size: 1em;  }
+    font-size: 1em;
+  }
   nav ul li a {
     font-size: 0.9em;
-    padding: 8px 12px;  }
+    padding: 8px 12px;
+  }
 }
 
 header {
