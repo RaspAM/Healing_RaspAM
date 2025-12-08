@@ -1,43 +1,4 @@
-/* Адаптивность */
-@media (max-width: 480px) {
-  header {
-    background-position: top center; /* показываем верхнюю часть */
-    background-size: contain;        /* картинка целиком, но могут быть поля */
-  }
-}
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2em;
-  }
-  header p {
-    font-size: 1.1em;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  nav ul li a {
-    font-size: 1em;
-    padding: 10px 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding: 20px 10px;
-  }
-  header h1 {
-    font-size: 1.6em;
-  }
-  header p {
-    font-size: 1em;
-  }
-  nav ul li a {
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
-}
-
+/* Header */
 header {
   background: url("./images/header-bg.jpg") no-repeat center center/cover;
   min-height: 100vh; /* высота = экран */
@@ -45,11 +6,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center; /* центрируем по вертикали */
-  align-items: center; /* центрируем по горизонтали */
+  align-items: center;     /* центрируем по горизонтали */
   text-align: center;
   color: #003366;
   padding: 20px;
 }
+
 header h1,
 header p {
   font-family: "Arial", sans-serif;
@@ -57,13 +19,14 @@ header p {
   text-shadow: 1px 1px 0 #e9ebcb;
 }
 
+/* Заголовок и текст с плавной адаптацией */
 header h1 {
-  font-size: 2em;
+  font-size: clamp(1.6em, 4vw, 2.2em); /* минимум 1.6em, максимум 2.2em */
   margin-bottom: 20px;
 }
 
 header p {
-  font-size: 1.6em;
+  font-size: clamp(1em, 2.5vw, 1.6em); /* минимум 1em, максимум 1.6em */
   line-height: 1.4;
   margin-bottom: 15px;
 }
@@ -89,10 +52,6 @@ nav ul {
   flex-wrap: wrap;
   justify-content: center;
 }
-ul {
-  list-style: none;   /* убираем стандартные точки */
-  padding-left: 0;    /* убираем отступ слева */
-}
 
 nav ul li {
   margin: 5px;
@@ -102,7 +61,7 @@ nav ul li a {
   color: #0b021d;
   text-shadow: 1px 1px 0 #cbdaeb;
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: clamp(0.9em, 2vw, 1.6em); /* плавная адаптация */
   padding: 8px 16px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -130,13 +89,14 @@ section {
 section h2 {
   color: #006699;
   margin-top: 0;
-  font-size: 1.6em;
+  font-size: clamp(1.4em, 3vw, 1.9em); /* плавная адаптация */
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }
+
 .star {
-  color: gold;       /* золотой цвет */
-  font-size: 1.5em;  /* можно увеличить размер */
+  color: gold;
+  font-size: 1.5em;
 }
 
 /* Футер */
@@ -149,12 +109,12 @@ footer {
 
 /* Общие стили для секций */
 #opus,
-#history,
+#excursions,
 #healing,
 #hotels,
 #excursions,
 #contacts {
-  font-size: 1.2em;
+  font-size: clamp(1em, 2vw, 1.2em);
   line-height: 1.6;
 }
 
@@ -162,14 +122,14 @@ footer {
   line-height: 1.4;
 }
 #opus h2 {
-  font-size: 1.8em;
+  font-size: clamp(1.4em, 3vw, 1.8em);
 }
 #history h2,
 #hotels h2,
 #excursions h2,
 #contacts h2 {
-  font-size: 1.9em;
+  font-size: clamp(1.6em, 3.5vw, 1.9em);
 }
 #healing h2 {
-  font-size: 1.4em;
+  font-size: clamp(1.2em, 2.5vw, 1.4em);
 }
