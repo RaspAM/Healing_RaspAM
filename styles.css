@@ -141,8 +141,8 @@ footer {
   max-width: 300px;
   height: auto;
 }
-body {
-  max-width: 900px;   /* ограничение ширины */
-  margin: 0 auto;     /* центрирование */
-  padding: 20px;      /* внутренние отступы */
+.page-content {
+  max-width: clamp(600px, 80%, 900px);
+  margin: 0 auto;
+  padding: 20px;
 }
