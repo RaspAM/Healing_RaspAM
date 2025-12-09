@@ -147,8 +147,10 @@ footer {
 }
 
 .excursion-photo {
-  max-width: 800px;
+  display: block;       /* картинка занимает всю строку */
+  max-width: 100%;      /* адаптивная ширина */
   height: auto;
+  margin: 20px auto;    /* отступы сверху/снизу и центрирование */
 }
 .page-content {
   max-width: clamp(600px, 80%, 900px);
