@@ -11,6 +11,11 @@ header {
   color: #003366;
   padding: 20px;
 }
+header {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 
 header h1,
 header p {
