@@ -142,12 +142,12 @@ footer {
   width: 100%;
   max-width: 900px;     /* регулируй на вкус: 700–900px */
   margin: 0 auto;       /* центрирование блока */
-  text-align: center;   /* центрирование текста внутри */
+  text-align: left;   /* центрирование текста внутри */
   padding: 20px;
 }
 
 .excursion-photo {
-  max-width: 600px;
+  max-width: 800px;
   height: auto;
 }
 .page-content {
