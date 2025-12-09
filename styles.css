@@ -6,7 +6,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center; /* центрируем по вертикали */
-  align-items: center;     /* центрируем по горизонтали */
+  /*align-items: center;     /* центрируем по горизонтали */*/
   text-align: center;
   color: #003366;
   padding: 20px;
@@ -137,11 +137,15 @@ footer {
 #healing h2 {
   font-size: clamp(1.2em, 2.5vw, 1.4em);
 }
+/* Узкая колонка по центру */
 .header-inner {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;     /* регулируй на вкус: 700–900px */
+  margin: 0 auto;       /* центрирование блока */
+  text-align: center;   /* центрирование текста внутри */
   padding: 20px;
 }
+
 .excursion-photo {
   max-width: 300px;
   height: auto;
