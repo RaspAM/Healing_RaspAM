@@ -1,5 +1,5 @@
 /* Header */
-header {
+.home-header {
   background: url("./images/header-bg.jpg") no-repeat center center/cover;
   min-height: 100vh; /* высота = экран */
   filter: brightness(1.2);
