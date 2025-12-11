@@ -149,10 +149,21 @@ footer {
     padding: 10px 14px;
   }
 }
-
 @media (max-width: 480px) {
+  body {
+    background-color: #ffffff; /* белый фон */
+    color: #003366;            /* тёмно-синий текст */
+  }
+
   nav ul li a {
     font-size: 0.9em;
     padding: 8px 12px;
   }
+
+  .page-content p {
+    font-size: 1.1em;          /* чуть крупнее для мобильных */
+    line-height: 1.4;
+    color: #003366;            /* фиксируем цвет текста */
+  }
 }
+
