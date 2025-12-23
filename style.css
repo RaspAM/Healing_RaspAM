@@ -26,7 +26,7 @@
   font-size: clamp(1.2em, 2.2vw, 1.6em); /* увеличенный минимум и максимум */
   line-height: 1.2;
   max-width: 900px;
-  margin: 20px auto 40px auto; /* верхний отступ 20px вместо 40px */
+  margin: 10px auto 40px auto; /* верхний отступ 10px ISO 20px */
   padding: 0 20px;
 }
 /* ===== Навигация ===== */
