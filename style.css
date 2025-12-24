@@ -51,6 +51,7 @@ nav ul li a {
   transition: all 0.3s ease;
   display: inline-block;
   border: 1.5px solid rgb(32, 168, 236);
+  background-color: #bcd9ff;
 }
 
 nav ul li a:hover {
