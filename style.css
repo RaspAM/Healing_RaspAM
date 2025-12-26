@@ -58,6 +58,10 @@ ul {
 }
 
 /* ===== Навигация ===== */
+nav {
+  background-color: #EFEDE8; /* на полтона темнее */
+  padding: 10px 0;
+}
 nav ul {
   display: flex;
   flex-wrap: wrap;
