@@ -199,29 +199,43 @@ footer {
   line-height: inherit;
   font-weight: inherit;
 }
-method-mini {
-  font-size: 1.15em;
-  line-height: 1.55;
+/* Общий стиль блока */
+.method-mini {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #003366;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 10px 0;
 }
-.method-mini p {
-  margin: 15px 0;
+
+/* Заголовок (имя Майера) */
+.method-mini strong {
+  display: block;
+  font-size: 1.35em;      /* крупнее, но не кричаще */
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #003366;         /* тот же спокойный цвет */
 }
+/* Подзаголовки */
+.mini-title {
+  font-size: 1.15em;      /* чуть больше текста, но не огромный */
+  font-weight: 600;
+  margin: 18px 0 8px;
+  color: #003366;         /* убираем яркий голубой */
+}
+/* Абзацы */
+.method-mini p {
+  margin: 12px 0;
+}
+/* Списки */
 .method-mini ul {
-  margin: 12px 0 20px;
-  padding-left: 22px;
+  margin: 8px 0 18px;
+  padding-left: 20px;
   list-style: disc;
-  font-size: 1.1em;
-  line-height: 1.55;
 }
 .method-mini ul li {
-  margin-bottom: 6px;
-}
-.mini-title {
-  font-weight: 600;
-  font-size: 1.25em;
-  margin: 22px 0 10px;
-  color: #006699;
+  margin-bottom: 4px;
 }
 @media (min-width: 600px) {
   .method-mini .short {
