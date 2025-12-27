@@ -1,37 +1,37 @@
-/* ===== Базовые стили ===== */
-body {
-  background-color: #F7F5F2;
-  color: #003366;
+/*  БАЗОВЫЕ СТИЛИ */
+html, body {
   margin: 0;
+  padding: 0;
+  background: #F7F5F2;
+  color: #003366;
   font-family: inherit;
 }
 
-/* Убираем маркеры у всех списков */
 ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
+
 .author {
   font-weight: 600;
-  color: #003366; /* спокойный тёмно-синий, хорошо читается */
+  color: #003366;
   text-decoration: none;
 }
 .author:hover {
   text-decoration: underline;
 }
-/* ===== Герой-блок ===== */
+
+/*   ГЕРОЙ-БЛОК */
 .home-header {
   text-align: center;
   padding: 10px;
 }
 
 .home-header img.hero-image {
-  display: block;
   width: 100%;
   height: auto;
-  margin: 0;
-  border: none;
+  display: block;
 }
 
 .home-header h1 {
@@ -41,107 +41,83 @@ ul {
   font-size: clamp(1.6em, 4vw, 2.5em);
 }
 
-/* ===== Контент ===== */
+/*    КОНТЕНТ */
 .page-content {
-  max-width: clamp(600px, 80%, 900px);
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .page-content p {
   font-size: clamp(1.2em, 2.2vw, 1.6em);
-  line-height: 1.2;
-  max-width: 900px;
+  line-height: 1.45;
   margin: 10px auto 40px;
   padding: 0 20px;
 }
 
-/* Фото в тексте */
+/* Фото */
 .excursion-photo {
-  display: block;
   max-width: 100%;
   height: auto;
+  display: block;
   margin: 20px auto;
 }
 
-/* ===== Навигация ===== */
+/*    НАВИГАЦИЯ= */
 nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px; /ISO 20px
-}
-
-nav ul li {
-  margin: 5px;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 nav ul li a {
-  color: #0b021d;
-  text-shadow: 1px 1px 0 #cbdaeb;
+  display: inline-block;
+  padding: 8px 16px;
   font-weight: bold;
   font-size: clamp(0.9em, 2vw, 1.6em);
-  padding: 8px 16px;
-  border-radius: 6px;
+  color: #0b021d;
+  text-shadow: 1px 1px 0 #cbdaeb;
   border: 1.5px solid rgb(32, 168, 236);
-  background-color: #bcd9ff;
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-decoration: none; /* убираем подчёркивание */
+  background: #bcd9ff;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: #97b4ee;
+  background: #97b4ee;
   color: #003366;
   box-shadow: 0 0 8px rgba(38, 255, 0, 0.7);
 }
 
-/* ===== Секции ===== */
+/*    СЕКЦИИ ==== */
 section {
-  padding: 40px 20px;
   max-width: 900px;
   margin: 40px auto;
+  padding: 40px 20px;
   background: #F7F5F2;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.03), 0 4px 10px rgba(0,0,0,0.1);
   border-left: 6px solid #006699;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.03), 0 4px 10px rgba(0,0,0,0.1);
+  line-height: 1.55;
 }
 
 section h2 {
-  color: #006699;
   margin-top: 0;
-  font-size: clamp(1.4em, 3vw, 1.9em);
-  border-bottom: 2px solid #eee;
   padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  color: #006699;
+  font-size: clamp(1.4em, 3vw, 1.9em);
 }
 
 /* Индивидуальные секции */
-#opus { line-height: 1.4; }
-#opus h2 { font-size: clamp(1.4em, 3vw, 1.8em); }
-
-#hotels h2,
-#therapy h2,
-#excursions h2,
-#contacts h2 {
-  font-size: clamp(1.6em, 3.5vw, 1.9em);
-}
-
-#healing h2 {
-  font-size: clamp(1.2em, 2.5vw, 1.4em);
-}
-
-#opus,
-#healing,
-#hotels,
-#therapy,
-#excursions,
-#contacts {
+#opus, #healing, #hotels, #therapy, #excursions, #contacts {
   font-size: clamp(1.1em, 2vw, 1.3em);
-  line-height: 1.6;
 }
 
-/* Узкая колонка */
+/*   УЗКАЯ КОЛОНКА === */
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -149,7 +125,9 @@ section h2 {
   text-align: left;
 }
 
-/* ===== Футер ===== */
+/* =========================
+   ФУТЕР
+========================= */
 footer {
   background: #87CEEB;
   color: #003366;
@@ -161,6 +139,10 @@ footer {
   color: gold;
   font-size: 1.5em;
 }
+
+/* =========================
+   АККОРДЕОН
+========================= */
 .accordion {
   width: 100%;
   background: #e6f2ff;
@@ -202,45 +184,47 @@ footer {
   font-size: 18px;
   line-height: 1.2;
 }
+
+.panel.open {
+  padding: 10px 10px;
+}
+
+/* =========================
+   БЛОКИ МАЙЕР / ЗАЛМАНОВ / БУТЕЙКО
+========================= */
 .method-mini .short {
   display: block;
+  width: 100%;
   white-space: normal;
   overflow: visible;
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
 }
+
 @media (min-width: 600px) {
   .method-mini .short {
     max-width: 300px;
   }
 }
-.panel.open {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
 
-/* ===== Адаптивность ===== */
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul li a {
-    font-size: 1em;
-    padding: 10px 14px;
   }
 }
 
 @media (max-width: 480px) {
   nav ul li a {
-    font-size: 0.9em;
-    padding: 8px 12px;
+    font-size: 1em;
+    padding: 10px 14px;
   }
 
   .page-content p {
     font-size: 1.1em;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 }
