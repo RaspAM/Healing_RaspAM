@@ -14,7 +14,7 @@ ul {
 }
 .author {
   font-weight: 500;
-  text-shadow: 0 0 4px rgba(0,0,0,0.35);
+  text-shadow: 0 0 2px rgba(0,0,0,0.25); /iso 4px 0.35
 }
 /* ===== Герой-блок ===== */
 .home-header {
