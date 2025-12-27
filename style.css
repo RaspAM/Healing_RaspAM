@@ -199,18 +199,36 @@ footer {
   line-height: inherit;
   font-weight: inherit;
 }
-
+method-mini {
+  font-size: 1.15em;
+  line-height: 1.55;
+  padding: 10px 0;
+}
+.method-mini p {
+  margin: 15px 0;
+}
+.method-mini ul {
+  margin: 12px 0 20px;
+  padding-left: 22px;
+  list-style: disc;
+  font-size: 1.1em;
+  line-height: 1.55;
+}
+.method-mini ul li {
+  margin-bottom: 6px;
+}
+.mini-title {
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 22px 0 10px;
+  color: #006699;
+}
 @media (min-width: 600px) {
   .method-mini .short {
     max-width: 300px;
   }
 }
-.mini-title {
-  font-size: 1.25em;
-  font-weight: 600;
-  margin: 22px 0 10px;
-  color: #006699;
-}
+
 /* =========================
    АДАПТИВНОСТЬ
 ========================= */
