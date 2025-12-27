@@ -12,7 +12,9 @@ ul {
   padding: 0;
   margin: 0;
 }
-
+.author {
+  text-shadow: 0 0 3px rgba(0,0,0,0.25);
+}
 /* ===== Герой-блок ===== */
 .home-header {
   text-align: center;
