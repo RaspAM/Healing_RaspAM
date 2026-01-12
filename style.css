@@ -50,10 +50,10 @@ ul {
   padding: 20px;
 }
 
-/* ЕДИНЫЙ РАЗМЕР ТЕКСТА ДЛЯ P, LI, H3 */
+/* ЕДИНЫЙ РАЗМЕР ТЕКСТА ДЛЯ P, LI, H3 — ТОЛЬКО ВНУТРИ page-content */
 .page-content p,
 .page-content ul li,
-h3 {
+.page-content h3 {
   font-size: clamp(1.2em, 2.2vw, 1.6em);
   line-height: 1.5;
   color: #003366;
@@ -62,7 +62,7 @@ h3 {
 }
 
 /* H3 — выделенный */
-h3 {
+.page-content h3 {
   font-weight: 700;
   margin-top: 30px;
   margin-bottom: 10px;
