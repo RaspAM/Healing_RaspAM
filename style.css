@@ -113,7 +113,7 @@ section h2 {
 }
 
 /* Индивидуальные секции */
-#opus, #healing, #hotels, #therapy, #excursions, #contacts {
+#concept, #opus, #healing, #hotels, #therapy, #excursions, #contacts {
   font-size: clamp(1.1em, 2vw, 1.3em);
 }
 
