@@ -268,8 +268,8 @@ footer {
 /* =========  АДАПТИВНОСТЬ ================ */
 @media (max-width: 768px) {
   nav ul li a {
-    font-size: 0.9em;
-    padding: 10px 14px;
+    font-size: 0.8em; /* iso 0.9 */
+    padding: 5px 14px; /* 5 ISO 10 */
     flex: 1 1 45%;
   }
 }
@@ -277,7 +277,7 @@ footer {
 @media (max-width: 480px) {
   nav ul li a {
     font-size: 0.8em;
-    padding: 8px 10px;
+    padding: 5px 8px; /* 8px 10px */
     flex: 1 1 100%;
   }
 }
@@ -307,4 +307,8 @@ footer {
   section, .page {
     padding: 12px;
   }
+}
+strong {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
