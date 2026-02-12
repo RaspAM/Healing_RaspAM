@@ -213,33 +213,42 @@ footer {
   margin-top: 4px;
 }
 
-/* =========  АДАПТИВНОСТЬ ТЕКСТА (исправленная и упрощённая) ================ */
+/* =========  АДАПТИВНОСТЬ ТЕКСТА (оптимизированная) ================ */
+
 /* --- Планшеты и небольшие экраны --- */
 @media (max-width: 768px) {
 
   /* общий текст немного меньше */
-  section, .page, p, li {
+  section p,
+  section li,
+  .page-content p,
+  .page-content li {
     font-size: 0.9em;
     line-height: 1.5;
   }
 
-  /* strong остаётся крупнее */
+  /* strong остаётся заметным */
   strong {
     font-size: 1.05em;
     font-weight: 600;
   }
 
-  /* секции компактнее */
-  section, .page {
-    padding: 10px 12px;
-    max-width: 100%;
+  /* секции компактнее, но ширина НЕ ломается */
+  section {
+    padding: 14px 14px;
   }
 
-  /* мини‑страницы (Майер, Залманов, Бутейко) */
+  /* ограничение ширины для комфортного чтения */
+  .page-content,
+  .method-mini {
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+  /* мини‑страницы */
   .method-mini {
     font-size: 1em;
     line-height: 1.55;
-    padding: 16px;
   }
 
   .method-mini strong {
@@ -259,7 +268,10 @@ footer {
 /* --- Смартфоны --- */
 @media (max-width: 480px) {
 
-  section, .page, p, li {
+  section p,
+  section li,
+  .page-content p,
+  .page-content li {
     font-size: 0.85em;
     line-height: 1.48;
   }
@@ -269,14 +281,19 @@ footer {
     font-weight: 600;
   }
 
-  section, .page {
-    padding: 8px 10px;
+  section {
+    padding: 10px 12px;
+  }
+
+  .page-content,
+  .method-mini {
+    max-width: 94%;
+    margin: 0 auto;
   }
 
   /* мини‑страницы */
   .method-mini {
     font-size: 0.95em;
-    padding: 14px;
   }
 
   .method-mini strong {
