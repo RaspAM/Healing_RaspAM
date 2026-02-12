@@ -263,9 +263,7 @@ footer {
     font-weight: 700;
     margin: 20px 0 10px;
   }
-  .method-mini strong { font-size: 1.6em; font-weight: 700; }
-  .mini-title { font-size: 1.8em; font-weight: 700; }
-}
+  }
 
 /* --- Смартфоны --- */
 @media (max-width: 480px) {
@@ -324,5 +322,17 @@ footer {
 
   .panel {
     padding: 8px 10px;
+  }
+}
+/* ===== ДЕСКТОПНЫЕ СТИЛИ ===== */
+@media (min-width: 769px) {
+  .method-mini strong {
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+
+  .mini-title {
+    font-size: 1.8em;
+    font-weight: 700;
   }
 }
