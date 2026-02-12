@@ -38,7 +38,7 @@ ul {
   margin: 10px 0 5px;
   color: #003366;
   text-shadow: 1px 1px 0 #e9ebcb;
-  font-size: clamp(1.2em, 3vw, 1.9em);
+  font-size: clamp(1.1em, 2.4vw, 1.6em);
 }
 
 /* =========================================
