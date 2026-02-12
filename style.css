@@ -13,15 +13,14 @@ ul {
   padding: 0 0 0 40px;
   list-style: disc;
 }
-
 /* Автор */
 .author {
-  font-weight: 600;
-  color: #003366;
+  background: #e8eef5;
+  padding: 2px 4px;
+  border-radius: 4px;
   text-decoration: none;
-}
-.author:hover {
-  text-decoration: underline;
+  color: #003366;
+  font-weight: 600;
 }
 
 /* ====== ГЕРОЙ-БЛОК=========== */
