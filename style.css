@@ -189,8 +189,7 @@ footer {
   overflow: hidden;
   transition: max-height 0.45s ease;
   padding: 0 10px;
-  font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.4; /* можно оставить */
 }
 
 .panel.open {
