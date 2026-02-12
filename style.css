@@ -308,5 +308,18 @@ strong {
   overflow-wrap: break-word;
   white-space: normal;
 }
+/* Мобильная адаптация аккордеона */
+@media (max-width: 600px) {
+  .panel p,
+  .panel li,
+  .panel strong {
+    font-size: 0.85em !important;
+    font-weight: normal !important;
+    line-height: 1.45;
+  }
 
+  .panel {
+    padding: 8px 10px !important;
+  }
+}
 
