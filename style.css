@@ -212,112 +212,93 @@ footer {
   color: #555;
   margin-top: 4px;
 }
-/* =========  МЕТОДЫ (Майер / Залманов / Бутейко)========= */
-.method-mini {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: #003366;
-  max-width: 700px;
-  margin: 0 auto;
-}
 
-.method-mini h1 {
-  font-size: 1.6em;
-  margin-bottom: 12px;
-}
-
-.method-mini h2 {
-  font-size: 1.35em;
-  margin-bottom: 12px;
-}
-
-.mini-title {
-  font-size: 1.2em;
-  font-weight: 600;
-  margin: 18px 0 8px;
-  color: #003366;
-}
-
-.method-mini p {
-  font-size: 1.2em;
-  margin: 12px 0;
-}
-
-.method-mini ul {
-  margin: 10px 0 20px;
-  padding-left: 20px;
-  list-style: disc;
-}
-
-.method-mini ul li {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 6px;
-}
-.page-content h3 {
-  font-size: clamp(1.2em, 2.2vw, 1.6em); /* как p */
-  font-weight: 700;                      /* выделение */
-  line-height: 1.5;                      /* как p */
-  color: #003366;
-  margin: 30px 0 10px;
-  padding: 0 20px;                       /* как p */
-}
-
-/* =========  АДАПТИВНОСТЬ ТЕКСТА (исправленная) ================ */
+/* =========  АДАПТИВНОСТЬ ТЕКСТА (исправленная и упрощённая) ================ */
+/* --- Планшеты и небольшие экраны --- */
 @media (max-width: 768px) {
 
-  /* уменьшаем общий текст, но НЕ strong */
+  /* общий текст немного меньше */
   section, .page, p, li {
     font-size: 0.9em;
     line-height: 1.5;
   }
 
-  /* strong остаётся нормального размера */
+  /* strong остаётся крупнее */
   strong {
-    font-size: 1em;
+    font-size: 1.05em;
     font-weight: 600;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
   }
 
+  /* секции компактнее */
   section, .page {
     padding: 10px 12px;
     max-width: 100%;
   }
+
+  /* мини‑страницы (Майер, Залманов, Бутейко) */
+  .method-mini {
+    font-size: 1em;
+    line-height: 1.55;
+    padding: 16px;
+  }
+
+  .method-mini strong {
+    font-size: 1.2em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .mini-title {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 20px 0 10px;
+  }
 }
 
+/* --- Смартфоны --- */
 @media (max-width: 480px) {
 
   section, .page, p, li {
-    font-size: 0.82em;
+    font-size: 0.85em;
     line-height: 1.48;
   }
 
   strong {
-    font-size: 0.95em;   /* чуть крупнее текста */
+    font-size: 1em;
     font-weight: 600;
   }
 
   section, .page {
     padding: 8px 10px;
-    max-width: 100%;
+  }
+
+  /* мини‑страницы */
+  .method-mini {
+    font-size: 0.95em;
+    padding: 14px;
+  }
+
+  .method-mini strong {
+    font-size: 1.15em;
+  }
+
+  .mini-title {
+    font-size: 1.2em;
   }
 }
 
-/* ======== Мобильная адаптация аккордеона (исправленная) ======== */
+/* ======== Мобильная адаптация аккордеона ======== */
 @media (max-width: 600px) {
 
-  /* обычный текст в аккордеоне чуть меньше */
   .panel p,
   .panel li {
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 1.45;
   }
 
-  /* strong в аккордеоне снова выделяется */
   .panel strong {
-    font-size: 1em;
+    font-size: 1.05em;
     font-weight: 600;
     line-height: 1.45;
   }
@@ -326,4 +307,3 @@ footer {
     padding: 8px 10px;
   }
 }
-
