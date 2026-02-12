@@ -16,13 +16,12 @@ ul {
 /* Автор */
 .author {
   font-weight: 600;
-  color: #003366;                 /* базовый цвет */
-   text-shadow: 0 0 4px rgba(0, 51, 102, 0.4);
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  color: #003366;
+text-shadow: 0 0 3px rgba(255,255,255,0.8);
 }
 .author:hover {
-  color: #1e90ff;                 /* голубой при наведении */
-  }
+  text-decoration: underline;
+}
 /* ====== ГЕРОЙ-БЛОК=========== */
 .home-header {
   text-align: center;
