@@ -43,7 +43,7 @@ text-shadow: 0 0 3px rgba(255,255,255,0.8);
   margin: 10px 0 5px;
   color: #003366;
   text-shadow: 1px 1px 0 #e9ebcb;
-  font-size: clamp(1.4rem, 2vw, 1.4rem);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
 }
 
 /* ==== КОНТЕНТ==== */
@@ -57,10 +57,9 @@ text-shadow: 0 0 3px rgba(255,255,255,0.8);
 .page-content p,
 .page-content ul li {
   font-size: 1rem;
-  line-height: 1.55;
-  margin: 12px 0;
-  padding: 0;
-  color: #003366;
+  line-height: 1.5;
+  margin: 10px auto 14px;
+  padding: 0 20px;
 }
 
 /* Фото */
@@ -83,42 +82,43 @@ nav ul {
 }
 
 nav ul li a {
-  padding: 8px 16px;
-  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
-  border-radius: 8px;
-  border: 1px solid #1fa0e6;
-  background: #cfe4ff;
-  text-shadow: none;
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: bold;
+  font-size: clamp(0.9em, 2vw, 1.3em);
+  color: #0b021d;
+  text-shadow: 1px 1px 0 #cbdaeb;
+  border: 1.5px solid rgb(32, 168, 236);
+  background: #bcd9ff;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  white-space: nowrap;
 }
+
+nav ul li a:hover {
+  background: #97b4ee;
+  color: #003366;
+  box-shadow: 0 0 8px rgba(38, 255, 0, 0.7);
+}
+
 /* ========== СЕКЦИИ =============== */
-/* ===== Секции ===== */
 section {
-  margin: 16px auto;
-  padding: 18px 20px;
+  margin: 5px auto; /* new 5 ISO - 10 ISO 40 */
+  padding: 10px 10px; /* new 10  ISO 20 ISO 40 */
   background: #F7F5F2;
-  border-left: 5px solid #006699;
+  border-left: 6px solid #006699;
   border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   line-height: 1.55;
 }
 
-/* ===== Заголовки ===== */
 section h2 {
-  margin: 0 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #e3e3e3;
-  color: #003366;
-  font-size: clamp(1.2rem, 2.4vw, 1.9rem);
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-section h3 {
-  margin: 18px 0 10px;
-  color: #003366;
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  font-weight: 600;
-  line-height: 1.3;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  color: #006699;
+  font-size: clamp(1.4em, 3vw, 1.9em);
 }
 
 /* ======= УЗКАЯ КОЛОНКА ====== */
@@ -217,21 +217,15 @@ footer {
 }
 
 /* =========  АДАПТИВНОСТЬ ТЕКСТА (оптимизированная) ================ */
-
-/* --- Планшеты и небольшие экраны --- */
+/* --- Планшеты (768px и меньше) --- */
 @media (max-width: 768px) {
 
   section p,
   section li,
   .page-content p,
   .page-content li {
-    font-size: 0.5em; /* было 0.6em */
+    font-size: 0.9rem;   /* было 1rem → уменьшили на 10% */
     line-height: 1.5;
-  }
-
-  strong {
-    font-size: 0.8em; /* было 0,95em */
-    font-weight: 600;
   }
 
   section {
@@ -245,38 +239,26 @@ footer {
   }
 
   .method-mini {
-    font-size: 0.8em; /* было 0,9em */
+    font-size: 0.9rem;
     line-height: 1.55;
   }
 
-  .method-mini strong {
-    font-size: 0.9em; /* было 1.01em */
-    font-weight: 700;
-    display: block;
-    margin-bottom: 12px;
-  }
-
   .mini-title {
-    font-size: 0.9em; /* было 1.25em */
+    font-size: 1.1rem;
     font-weight: 700;
     margin: 20px 0 10px;
   }
 }
 
-/* --- Смартфоны --- */
+/* --- Смартфоны (480px и меньше) --- */
 @media (max-width: 480px) {
 
   section p,
   section li,
   .page-content p,
   .page-content li {
-    font-size: 0.6em; /* было 0.7em */
-    line-height: 1.40;
-  }
-
-  strong {
-    font-size: 0.9em; /* было 1em */
-    font-weight: 600;
+    font-size: 0.8rem;   /* уменьшили на 20% */
+    line-height: 1.45;
   }
 
   section {
@@ -290,29 +272,25 @@ footer {
   }
 
   .method-mini {
-    font-size: 0.8em; /* было 0.8em */
-  }
-
-  .method-mini strong {
-    font-size: 1.0em; /* было 1.15em */
+    font-size: 0.85rem;
   }
 
   .mini-title {
-    font-size: 1.05em; /* было 1.2em */
+    font-size: 1.0rem;
   }
 }
 
-/* ======== Мобильная адаптация аккордеона ======== */
+/* --- Аккордеон (мягкая адаптация) --- */
 @media (max-width: 600px) {
 
   .panel p,
   .panel li {
-    font-size: 0.7em;/*ISO 0.9em*/
+    font-size: 0.85rem;
     line-height: 1.45;
   }
 
   .panel strong {
-    font-size: 1.05em;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.45;
   }
@@ -321,6 +299,7 @@ footer {
     padding: 8px 10px;
   }
 }
+
 /* ===== ДЕСКТОПНЫЕ СТИЛИ ===== */
 @media (min-width: 769px) {
   .method-mini strong {
