@@ -119,6 +119,7 @@ section {
 }
 section h2 {
   margin-top: 0;
+  padding-left: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid #eee;
   color: #006699;
