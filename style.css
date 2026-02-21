@@ -1,6 +1,6 @@
 /* =====   БАЗОВЫЕ СТИЛИ ========== */
 html {
-  font-size: 16px; /* базовый размер */
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -15,20 +15,22 @@ body {
 
 /* Глобальные списки */
 ul {
-  margin: 0 0 14px 0; /* тест 14 iso 24*/
-  padding: 0 0 0 20px; /* тест 20 iso 40 */
+  margin: 0 0 14px 0;
+  padding: 0 0 0 20px;
   list-style: disc;
 }
+
 /* Автор */
 .author {
   font-weight: 600;
   color: #003366;
-text-shadow: 0 0 3px rgba(255,255,255,0.8);
-   transition: color 0.2s ease, text-shadow 0.2s ease;
+  text-shadow: 0 0 3px rgba(255,255,255,0.8);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 .author:hover {
-  color: #1e90ff; 
+  color: #1e90ff;
 }
+
 /* ====== ГЕРОЙ-БЛОК=========== */
 .home-header {
   text-align: center;
@@ -55,11 +57,19 @@ text-shadow: 0 0 3px rgba(255,255,255,0.8);
 
 /* Единый размер текста для p и li */
 .page-content p,
-.page-content ul li {
+.page-content ul li,
+section p,
+section li {
   font-size: 1rem;
   line-height: 1.5;
   margin: 10px auto 14px;
   padding: 0 20px;
+}
+
+/* Нормализация strong */
+.page-content strong,
+section strong {
+  font-weight: 600; /* вместо жирного 700 */
 }
 
 /* Фото */
@@ -104,13 +114,12 @@ nav ul li a:hover {
 
 /* ========== СЕКЦИИ =============== */
 section {
-  margin: 5px auto; /* new 5 ISO - 10 ISO 40 */
-  padding: 10px 10px; /* new 10  ISO 20 ISO 40 */
+  margin: 5px auto;
+  padding: 10px 10px;
   background: #F7F5F2;
   border-left: 6px solid #006699;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  line-height: 1.55;
 }
 
 section h2 {
@@ -118,7 +127,7 @@ section h2 {
   padding-bottom: 10px;
   border-bottom: 2px solid #eee;
   color: #006699;
-  font-size: clamp(1.2rem, 2vw, 1.2rem); /* 1.4em, 3vw, 1.9em */
+  font-size: clamp(1.2rem, 2vw, 1.2rem);
 }
 
 /* ======= УЗКАЯ КОЛОНКА ====== */
@@ -219,13 +228,12 @@ footer {
 /* =========  АДАПТИВНОСТЬ ТЕКСТА (оптимизированная) ================ */
 /* --- Планшеты (768px и меньше) --- */
 @media (max-width: 768px) {
-
   section p,
   section li,
   .page-content p,
   .page-content li {
-    font-size: 0.9rem;   /* было 1rem → уменьшили на 10% */
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.45;
   }
 
   section {
@@ -240,7 +248,7 @@ footer {
 
   .method-mini {
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .mini-title {
@@ -252,13 +260,12 @@ footer {
 
 /* --- Смартфоны (480px и меньше) --- */
 @media (max-width: 480px) {
-
   section p,
   section li,
   .page-content p,
   .page-content li {
-    font-size: 0.8rem;   /* уменьшили на 20% */
-    line-height: 1.45;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   section {
