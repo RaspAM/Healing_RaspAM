@@ -296,6 +296,304 @@ footer {
   }
 
   .panel {
+    padding: 8px 10px;/* =====   БАЗОВЫЕ СТИЛИ ========== */
+html {
+  font-size: 16px; /* базовый размер */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F7F5F2;
+  color: #003366;
+  font-family: "Segoe UI", "Inter", sans-serif;
+}
+
+/* Глобальные списки */
+ul {
+  margin: 0 0 14px 0; /* тест 14 iso 24*/
+  padding: 0 0 0 20px; /* тест 20 iso 40 */
+  list-style: disc;
+}
+/* Автор */
+.author {
+  font-weight: 600;
+  color: #003366;
+text-shadow: 0 0 3px rgba(255,255,255,0.8);
+   transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.author:hover {
+  color: #1e90ff; 
+}
+/* ====== ГЕРОЙ-БЛОК=========== */
+.home-header {
+  text-align: center;
+  padding: 10px;
+}
+.home-header img.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.home-header h1 {
+  margin: 10px 0 5px;
+  color: #006699; /* ISO #003366;*/
+  text-shadow: 1px/*  1px 0 #e9ebcb;
+  font-size: clamp(1.2rem, 2vw, 1.2rem);
+}
+
+/* ==== КОНТЕНТ==== */
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Единый размер текста для p и li */
+.page-content p,
+.page-content ul li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 10px auto 14px;
+  padding: 0 20px;
+}
+
+/* Фото */
+.excursion-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* ==========  НАВИГАЦИЯ ============ */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  margin: 10px 0;
+  list-style: none; /* меню без точек */
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: bold;
+  font-size: clamp(0.9em, 2vw, 1.3em);
+  color: #0b021d;
+  text-shadow: 1px 1px 0 #cbdaeb;
+  border: 1.5px solid rgb(32, 168, 236);
+  background: #bcd9ff;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  background: #97b4ee;
+  color: #003366;
+  box-shadow: 0 0 8px rgba(38, 255, 0, 0.7);
+}
+
+/* ========== СЕКЦИИ =============== */
+section {
+  margin: 20px auto; /* new 20 ISO - 10 ISO 40 */
+  padding: 20px 10px; /* new 20  ISO 10 ISO 40 */
+  background: #F7F5F2;
+  border-left: 6px solid #006699;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  line-height: 1.55;
+}
+
+section h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  color: #006699;
+  font-size: clamp(1.2em, 2vw, 1.2em);
+}
+
+/* ======= УЗКАЯ КОЛОНКА ====== */
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+/* ============== ФУТЕР ========= */
+footer {
+  background: #87CEEB;
+  color: #003366;
+  text-align: center;
+  padding: 20px;
+}
+
+.star {
+  color: gold;
+  font-size: 1.5em;
+}
+
+/* ==========   АККОРДЕОН ========= */
+.accordion {
+  width: 100%;
+  background: #e6f2ff;
+  border: 2px solid #bcd9ff;
+  border-radius: 8px;
+  padding: 18px 24px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: 0.25s;
+}
+
+.accordion:hover {
+  background: #d4e9ff;
+  border-color: #a8ccff;
+}
+
+.accordion::after {
+  content: "📃";
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.25s;
+}
+
+.accordion.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.more-btn {
+  display: inline-block;
+  margin-top: 6px;
+  color: #1d3377dc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.more-btn:hover {
+  text-decoration: underline;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+  padding: 0 10px;
+  line-height: 1.4; /* можно оставить */
+}
+
+.panel.open {
+  padding: 10px 10px;
+}
+/* ==Терма фото == */
+.mini-photo {
+  text-align: center;
+  margin: 12px 0 18px 0;
+}
+
+.mini-photo img {
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.mini-photo .caption {
+  font-size: 0.85em;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* =========  АДАПТИВНОСТЬ ТЕКСТА (оптимизированная) ================ */
+/* --- Планшеты (768px и меньше) --- */
+@media (max-width: 768px) {
+
+  section p,
+  section li,
+  .page-content p,
+  .page-content li {
+    font-size: 0.9rem;   /* было 1rem → уменьшили на 10% */
+    line-height: 1.5;
+  }
+
+  section {
+    padding: 14px 14px;
+  }
+
+  .page-content,
+  .method-mini {
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+  .method-mini {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .mini-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 20px 0 10px;
+  }
+}
+
+/* --- Смартфоны (480px и меньше) --- */
+@media (max-width: 480px) {
+
+  section p,
+  section li,
+  .page-content p,
+  .page-content li {
+    font-size: 0.8rem;   /* уменьшили на 20% */
+    line-height: 1.45;
+  }
+
+  section {
+    padding: 10px 12px;
+  }
+
+  .page-content,
+  .method-mini {
+    max-width: 94%;
+    margin: 0 auto;
+  }
+
+  .method-mini {
+    font-size: 0.85rem;
+  }
+
+  .mini-title {
+    font-size: 1.0rem;
+  }
+}
+
+/* --- Аккордеон (мягкая адаптация) --- */
+@media (max-width: 600px) {
+
+  .panel p,
+  .panel li {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .panel strong {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .panel {
     padding: 8px 10px;
   }
 }
