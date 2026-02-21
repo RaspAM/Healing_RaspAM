@@ -89,7 +89,6 @@ section li {
 /* Кастомный маркер */
 .page-content li::before,
 section li::before {
-  content: "•";
   position: absolute;
   left: 0;
   top: 0.15em;
