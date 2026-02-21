@@ -71,7 +71,32 @@ section li {
 section strong {
   font-weight: 600; /* вместо жирного 700 */
 }
+/* Нормализация списков */
+.page-content ul,
+section ul {
+  padding-left: 0;
+  list-style: none;
+}
 
+/* Выравнивание li */
+.page-content li,
+section li {
+  position: relative;
+  padding-left: 20px;
+  line-height: inherit; /* чтобы li не был воздушнее p */
+}
+
+/* Кастомный маркер */
+.page-content li::before,
+section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  color: #006699;
+  font-size: 1.1em;
+  line-height: 1;
+}
 /* Фото */
 .excursion-photo {
   max-width: 100%;
