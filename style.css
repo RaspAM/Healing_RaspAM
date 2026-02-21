@@ -1,6 +1,7 @@
-/* =====   БАЗОВЫЕ СТИЛИ ========== */
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+
 html {
-  font-size: 16px; /* базовый размер */
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -13,32 +14,42 @@ body {
   font-family: "Segoe UI", "Inter", sans-serif;
 }
 
-/* Глобальные списки */
+/* Глобальные списки (контентные) */
 ul {
-  margin: 0 0 14px 0; /* тест 14 iso 24*/
-  padding: 0 0 0 20px; /* тест 20 iso 40 */
-  list-style: disc;
+  margin: 0 0 14px 0;
+  padding: 0 0 0 20px;
+  list-style: none; /* убираем стандартные точки везде */
 }
+
+li {
+  margin: 10px 0;
+}
+
 /* Автор */
 .author {
   font-weight: 600;
   color: #003366;
-text-shadow: 0 0 3px rgba(255,255,255,0.8);
-   transition: color 0.2s ease, text-shadow 0.2s ease;
+  text-shadow: 0 0 3px rgba(255,255,255,0.8);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
+
 .author:hover {
-  color: #1e90ff; 
+  color: #1e90ff;
 }
-/* ====== ГЕРОЙ-БЛОК=========== */
+
+/* ===== ГЕРОЙ-БЛОК ===== */
+
 .home-header {
   text-align: center;
   padding: 10px;
 }
+
 .home-header img.hero-image {
   width: 100%;
   height: auto;
   display: block;
 }
+
 .home-header h1 {
   margin: 10px 0 5px;
   color: #003366;
@@ -46,14 +57,15 @@ text-shadow: 0 0 3px rgba(255,255,255,0.8);
   font-size: clamp(1.4rem, 2vw, 1.4rem);
 }
 
-/* ==== КОНТЕНТ==== */
+/* ===== КОНТЕНТ ===== */
+
 .page-content {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Единый размер текста для p и li */
+/* Единый размер текста для p и li внутри контента */
 .page-content p,
 .page-content ul li {
   font-size: 1rem;
@@ -70,7 +82,8 @@ text-shadow: 0 0 3px rgba(255,255,255,0.8);
   margin: 20px auto;
 }
 
-/* ==========  НАВИГАЦИЯ ============ */
+/* ===== НАВИГАЦИЯ ===== */
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -79,6 +92,10 @@ nav ul {
   padding: 0;
   margin: 10px 0;
   list-style: none; /* меню без точек */
+}
+
+nav ul li {
+  margin: 0;
 }
 
 nav ul li a {
@@ -102,10 +119,11 @@ nav ul li a:hover {
   box-shadow: 0 0 8px rgba(38, 255, 0, 0.7);
 }
 
-/* ========== СЕКЦИИ =============== */
+/* ===== СЕКЦИИ ===== */
+
 section {
-  margin: 5px auto; /* new 5 ISO - 10 ISO 40 */
-  padding: 10px 10px; /* new 10  ISO 20 ISO 40 */
+  margin: 5px auto;
+  padding: 10px 10px;
   background: #F7F5F2;
   border-left: 6px solid #006699;
   border-radius: 8px;
@@ -121,7 +139,8 @@ section h2 {
   font-size: clamp(1.4em, 3vw, 1.9em);
 }
 
-/* ======= УЗКАЯ КОЛОНКА ====== */
+/* ===== УЗКАЯ КОЛОНКА ===== */
+
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -129,7 +148,8 @@ section h2 {
   text-align: left;
 }
 
-/* ============== ФУТЕР ========= */
+/* ===== ФУТЕР ===== */
+
 footer {
   background: #87CEEB;
   color: #003366;
@@ -142,7 +162,8 @@ footer {
   font-size: 1.5em;
 }
 
-/* ==========   АККОРДЕОН ========= */
+/* ===== АККОРДЕОН ===== */
+
 .accordion {
   width: 100%;
   background: #e6f2ff;
@@ -175,6 +196,7 @@ footer {
 .accordion.active::after {
   transform: translateY(-50%) rotate(180deg);
 }
+
 .more-btn {
   display: inline-block;
   margin-top: 6px;
@@ -192,13 +214,15 @@ footer {
   overflow: hidden;
   transition: max-height 0.45s ease;
   padding: 0 10px;
-  line-height: 1.4; /* можно оставить */
+  line-height: 1.4;
 }
 
 .panel.open {
   padding: 10px 10px;
 }
-/* ==Терма фото == */
+
+/* Терма фото */
+
 .mini-photo {
   text-align: center;
   margin: 12px 0 18px 0;
@@ -215,39 +239,22 @@ footer {
   color: #555;
   margin-top: 4px;
 }
-/* Убираем жирные точки внутри page-content */
-.page-content ul {
-  list-style: none;
-  padding-left: 0;
-}
 
-/* Возвращаем аккуратный отступ для li */
-.page-content ul li {
-  padding-left: 20px;
-}
+/* ===== АДАПТИВНОСТЬ ТЕКСТА ===== */
 
-/* Отключаем маркер у li, где уже есть свои символы (🔹, ★★★★★, ссылки) */
-.page-content ul li:has(> span),
-.page-content ul li:has(> a),
-.page-content ul li:has(> strong) {
-  list-style: none;
-  padding-left: 0;
-}
-
-/* =========  АДАПТИВНОСТЬ ТЕКСТА (оптимизированная) ================ */
-/* --- Планшеты (768px и меньше) --- */
+/* Планшеты (768px и меньше) */
 @media (max-width: 768px) {
 
   section p,
   section li,
   .page-content p,
   .page-content li {
-    font-size: 0.9rem;   /* было 1rem → уменьшили на 10% */
+    font-size: 0.9rem;
     line-height: 1.5;
   }
 
   section {
-    padding: 14px 14px;
+    padding: 14px 10px;
   }
 
   .page-content,
@@ -268,19 +275,19 @@ footer {
   }
 }
 
-/* --- Смартфоны (480px и меньше) --- */
+/* Смартфоны (480px и меньше) */
 @media (max-width: 480px) {
 
   section p,
   section li,
   .page-content p,
   .page-content li {
-    font-size: 0.8rem;   /* уменьшили на 20% */
+    font-size: 0.8rem;
     line-height: 1.45;
   }
 
   section {
-    padding: 10px 12px;
+    padding: 10px 8px;
   }
 
   .page-content,
@@ -298,7 +305,7 @@ footer {
   }
 }
 
-/* --- Аккордеон (мягкая адаптация) --- */
+/* Аккордеон (мягкая адаптация) */
 @media (max-width: 600px) {
 
   .panel p,
@@ -318,7 +325,7 @@ footer {
   }
 }
 
-/* ===== ДЕСКТОПНЫЕ СТИЛИ ===== */
+/* Десктопные стили */
 @media (min-width: 769px) {
   .method-mini strong {
     font-size: 1.6em;
